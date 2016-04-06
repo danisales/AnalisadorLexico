@@ -1,4 +1,5 @@
 package lexer;
+import java_cup.*;
 
 %%
 
@@ -11,9 +12,12 @@ package lexer;
 
 %class DsoLexer
 
-/* Identificadores: um identificador começa com uma letra ou underline e é seguido por qualquer quantidade de letras, underline e dígitos. Apenas letras entre A/a e Z/z são permitidos, há diferença entre maiúscula e minúscula. Palavras-chave não são identificadores; */
+/* Identificadores: um identificador começa com uma letra ou underline e é seguido por qualquer quantidade de letras, underline e dígitos.
+Apenas letras entre A/a e Z/z são permitidos, há diferença entre maiúscula e minúscula.
+Palavras-chave não são identificadores; */
 
-/* Literais Inteiros: uma sequência de dígitos iniciada com qualquer um dos dígitos entre 1 e 9 e seguida por qualquer número de dígitos entre 0 e 9. O dígito 0 também é um inteiro. */
+/* Literais Inteiros: uma sequência de dígitos iniciada com qualquer um dos dígitos entre 1 e 9 e seguida por qualquer número de dígitos entre 0 e 9.
+O dígito 0 também é um inteiro. */
 
 letters = [A-Za-z]
 underline = [_]
@@ -50,6 +54,29 @@ whitespace = [\n\t\r\f]
 "}"		{ System.out.println("Token }"); }
 "["		{ System.out.println("Token ["); }
 "]"		{ System.out.println("Token ]"); }
+
+/* Palavras reservadas: boolean, class, public, extends, static, void, main, String, int, while,
+if, else, return, length, true, false, this, new, System.out.println; */
+
+boolean	{ System.out.println("Palavra reservada: boolean"); }
+class	{ System.out.println("Palavra reservada: class"); }
+public	{ System.out.println("Palavra reservada: public"); }
+extends	{ System.out.println("Palavra reservada: extends"); }
+static	{ System.out.println("Palavra reservada: static"); }
+void	{ System.out.println("Palavra reservada: void"); }
+main	{ System.out.println("Palavra reservada: main"); }
+String	{ System.out.println("Palavra reservada: String"); }
+int 	{ System.out.println("Palavra reservada: int"); }
+while	{ System.out.println("Palavra reservada: while"); }
+if		{ System.out.println("Palavra reservada: if"); }
+else	{ System.out.println("Palavra reservada: else"); }
+return	{ System.out.println("Palavra reservada: return"); }
+length	{ System.out.println("Palavra reservada: length"); }
+true	{ System.out.println("Palavra reservada: true"); }
+false	{ System.out.println("Palavra reservada: false"); }
+this	{ System.out.println("Palavra reservada: this"); }
+new		{ System.out.println("Palavra reservada: new"); }
+System.out.println	{ System.out.println("Palavra reservada: System.out.println"); }
 
 /* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
 whitespace { /* ignora */ } 
