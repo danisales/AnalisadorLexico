@@ -24,10 +24,10 @@ alphanumerics = {letters}|{digit}|{underline}
 identifiers = {first}({alphanumerics})*
 whitespace = [\n\t\r\f]
 
+%%
+
 /* Operadores: &&, <, ==, !=, +, -, *, !; 
 (não há operador de divisão, por enquanto) */
-
-%%
 
 "&&"	{ System.out.println("Token &&"); }
 "<"		{ System.out.println("Token <"); }
@@ -37,6 +37,19 @@ whitespace = [\n\t\r\f]
 "-"		{ System.out.println("Token -"); }
 "*"		{ System.out.println("Token *"); }
 "!"		{ System.out.println("Token !"); }
+
+/* Delimitadores e pontuação: ; . , = ( ) { } [ ] */
+
+";"		{ System.out.println("Token ;"); }
+"."		{ System.out.println("Token ."); }		
+","		{ System.out.println("Token ,"); }
+"="		{ System.out.println("Token ="); }
+"("		{ System.out.println("Token ("); }
+")"		{ System.out.println("Token )"); }
+"{"		{ System.out.println("Token {"); }
+"}"		{ System.out.println("Token }"); }
+"["		{ System.out.println("Token ["); }
+"]"		{ System.out.println("Token ]"); }
 
 /* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
 whitespace { /* ignora */ } 
