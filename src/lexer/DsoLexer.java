@@ -34,13 +34,13 @@ class DsoLexer implements java_cup.runtime.Scanner {
    * Translates characters to character classes
    */
   private static final String ZZ_CMAP_PACKED = 
-    "\11\0\1\0\1\50\1\50\1\50\1\50\23\0\1\4\4\0\1\1"+
-    "\1\0\1\13\1\14\1\7\1\5\1\12\1\6\1\11\1\0\12\0"+
-    "\1\0\1\10\1\2\1\3\3\0\22\0\1\41\7\0\1\17\1\0"+
-    "\1\20\1\0\1\0\1\0\1\25\1\21\1\27\1\36\1\24\1\46"+
-    "\1\43\1\45\1\33\2\0\1\23\1\40\1\26\1\22\1\31\1\0"+
-    "\1\42\1\30\1\35\1\32\1\37\1\44\1\34\1\47\1\0\1\15"+
-    "\1\0\1\16\7\0\1\50\u1fa2\0\1\50\1\50\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
+    "\11\0\1\5\1\4\1\55\1\56\1\3\22\0\1\5\1\11\4\0"+
+    "\1\6\1\0\1\20\1\21\1\14\1\12\1\17\1\13\1\16\1\0"+
+    "\12\2\1\0\1\15\1\7\1\10\3\0\22\1\1\46\7\1\1\24"+
+    "\1\0\1\25\1\0\1\1\1\0\1\32\1\26\1\34\1\43\1\31"+
+    "\1\53\1\50\1\52\1\40\2\1\1\30\1\45\1\33\1\27\1\36"+
+    "\1\1\1\47\1\35\1\42\1\37\1\44\1\51\1\41\1\54\1\1"+
+    "\1\22\1\0\1\23\7\0\1\55\u1fa2\0\1\55\1\55\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\udfe6\0";
 
   /** 
    * Translates characters to character classes
@@ -53,16 +53,19 @@ class DsoLexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\2\1\1\2\1\3\1\4\1\5\1\6\1\7"+
-    "\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17"+
-    "\1\20\17\1\1\21\1\22\1\23\11\0\1\24\15\0"+
-    "\1\25\3\0\1\26\13\0\1\27\4\0\1\30\1\31"+
-    "\1\32\1\33\11\0\1\34\5\0\1\35\1\0\1\36"+
-    "\1\0\1\37\1\0\1\40\1\41\1\42\1\0\1\43"+
-    "\1\0\1\44\1\45\7\0\1\46\7\0\1\47";
+    "\1\1\1\2\1\3\1\1\2\4\1\2\1\5\1\6"+
+    "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16"+
+    "\1\17\1\20\1\21\1\22\1\23\17\3\1\24\1\25"+
+    "\1\26\1\27\11\3\1\30\15\3\1\31\3\3\1\32"+
+    "\13\3\1\33\4\3\1\34\1\35\1\36\1\37\10\3"+
+    "\1\40\5\3\1\41\1\42\1\3\1\43\1\3\1\44"+
+    "\1\45\1\46\1\3\1\47\1\50\1\51\1\0\1\3"+
+    "\1\0\1\3\1\0\1\3\1\0\1\3\1\0\1\3"+
+    "\1\0\1\3\1\0\1\3\1\0\1\3\1\0\1\3"+
+    "\1\0\1\3\1\0\1\3\2\52";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[129];
+    int [] result = new int[139];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -87,26 +90,27 @@ class DsoLexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\51\0\122\0\51\0\173\0\244\0\51\0\51"+
-    "\0\51\0\51\0\51\0\51\0\51\0\51\0\51\0\51"+
-    "\0\51\0\51\0\315\0\366\0\u011f\0\u0148\0\u0171\0\u019a"+
-    "\0\u01c3\0\u01ec\0\u0215\0\u023e\0\u0267\0\u0290\0\u02b9\0\u02e2"+
-    "\0\u030b\0\51\0\51\0\51\0\u0334\0\u035d\0\u0386\0\u03af"+
-    "\0\u03d8\0\u0401\0\u042a\0\u0453\0\u047c\0\51\0\u04a5\0\u04ce"+
-    "\0\u04f7\0\u0520\0\u0549\0\u0572\0\u059b\0\u05c4\0\u05ed\0\u0616"+
-    "\0\u063f\0\u0668\0\u0691\0\51\0\u06ba\0\u06e3\0\u070c\0\51"+
-    "\0\u0735\0\u075e\0\u0787\0\u07b0\0\u07d9\0\u0802\0\u082b\0\u0854"+
-    "\0\u087d\0\u08a6\0\u08cf\0\51\0\u08f8\0\u0921\0\u094a\0\u0973"+
-    "\0\51\0\51\0\51\0\51\0\u099c\0\u09c5\0\u09ee\0\u0a17"+
-    "\0\u0a40\0\u0a69\0\u0a92\0\u0abb\0\u0ae4\0\51\0\u0b0d\0\u0b36"+
-    "\0\u0b5f\0\u0b88\0\u0bb1\0\51\0\u0bda\0\51\0\u0c03\0\51"+
-    "\0\u0c2c\0\51\0\51\0\51\0\u0c55\0\51\0\u0c7e\0\51"+
-    "\0\51\0\u0ca7\0\u0cd0\0\u0cf9\0\u0d22\0\u0d4b\0\u0d74\0\u0d9d"+
-    "\0\51\0\u0dc6\0\u0def\0\u0e18\0\u0e41\0\u0e6a\0\u0e93\0\u0ebc"+
-    "\0\51";
+    "\0\0\0\57\0\136\0\215\0\274\0\57\0\353\0\57"+
+    "\0\u011a\0\u0149\0\57\0\57\0\57\0\57\0\57\0\57"+
+    "\0\57\0\57\0\57\0\57\0\57\0\57\0\u0178\0\u01a7"+
+    "\0\u01d6\0\u0205\0\u0234\0\u0263\0\u0292\0\u02c1\0\u02f0\0\u031f"+
+    "\0\u034e\0\u037d\0\u03ac\0\u03db\0\u040a\0\57\0\57\0\57"+
+    "\0\57\0\u0439\0\u0468\0\u0497\0\u04c6\0\u04f5\0\u0524\0\u0553"+
+    "\0\u0582\0\u05b1\0\136\0\u05e0\0\u060f\0\u063e\0\u066d\0\u069c"+
+    "\0\u06cb\0\u06fa\0\u0729\0\u0758\0\u0787\0\u07b6\0\u07e5\0\u0814"+
+    "\0\136\0\u0843\0\u0872\0\u08a1\0\136\0\u08d0\0\u08ff\0\u092e"+
+    "\0\u095d\0\u098c\0\u09bb\0\u09ea\0\u0a19\0\u0a48\0\u0a77\0\u0aa6"+
+    "\0\136\0\u0ad5\0\u0b04\0\u0b33\0\u0b62\0\136\0\136\0\136"+
+    "\0\136\0\u0b91\0\u0bc0\0\u0bef\0\u0c1e\0\u0c4d\0\u0c7c\0\u0cab"+
+    "\0\u0cda\0\136\0\u0d09\0\u0d38\0\u0d67\0\u0d96\0\u0dc5\0\136"+
+    "\0\136\0\u0df4\0\136\0\u0e23\0\136\0\136\0\136\0\u0e52"+
+    "\0\136\0\136\0\136\0\u0e81\0\u0eb0\0\u0edf\0\u0f0e\0\u0f3d"+
+    "\0\u0f6c\0\u0f9b\0\u0fca\0\u0ff9\0\u1028\0\u1057\0\u1086\0\u10b5"+
+    "\0\u10e4\0\u1113\0\u1142\0\u1171\0\u11a0\0\u11cf\0\u11fe\0\u122d"+
+    "\0\u125c\0\57\0\136";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[129];
+    int [] result = new int[139];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -129,39 +133,82 @@ class DsoLexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
+    "\1\2\1\3\1\4\1\5\2\6\1\7\1\10\1\11"+
     "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\22\1\23\1\2\1\24\1\25\1\2\1\26\1\27"+
-    "\1\30\1\31\1\2\1\32\1\2\1\33\1\2\1\34"+
-    "\1\35\1\36\1\37\1\2\1\40\1\2\1\41\2\2"+
-    "\52\0\1\42\52\0\1\43\50\0\1\44\67\0\1\45"+
-    "\52\0\1\46\47\0\1\47\10\0\1\50\40\0\1\51"+
-    "\47\0\1\52\62\0\1\53\45\0\1\54\44\0\1\55"+
-    "\17\0\1\56\44\0\1\57\2\0\1\60\25\0\1\61"+
-    "\53\0\1\62\60\0\1\63\11\0\1\64\25\0\1\65"+
-    "\71\0\1\66\30\0\1\67\45\0\1\70\54\0\1\71"+
-    "\52\0\1\72\55\0\1\73\57\0\1\74\31\0\1\75"+
-    "\50\0\1\76\44\0\1\77\64\0\1\100\45\0\1\101"+
-    "\51\0\1\102\50\0\1\103\50\0\1\104\57\0\1\105"+
-    "\36\0\1\106\55\0\1\107\46\0\1\110\40\0\1\111"+
-    "\50\0\1\112\70\0\1\113\31\0\1\114\50\0\1\115"+
-    "\54\0\1\116\55\0\1\117\36\0\1\120\51\0\1\121"+
-    "\54\0\1\122\56\0\1\123\40\0\1\124\55\0\1\125"+
-    "\52\0\1\126\45\0\1\127\41\0\1\130\11\0\1\131"+
-    "\43\0\1\132\44\0\1\133\61\0\1\134\41\0\1\135"+
-    "\52\0\1\136\53\0\1\137\50\0\1\140\43\0\1\141"+
-    "\46\0\1\142\66\0\1\143\32\0\1\144\50\0\1\145"+
-    "\50\0\1\146\51\0\1\147\70\0\1\150\41\0\1\151"+
-    "\41\0\1\152\50\0\1\153\64\0\1\154\45\0\1\155"+
-    "\36\0\1\156\52\0\1\157\46\0\1\160\52\0\1\161"+
-    "\20\0\50\162\32\0\1\163\41\0\1\164\53\0\1\165"+
-    "\55\0\1\166\45\0\1\167\56\0\1\170\37\0\1\171"+
-    "\24\0\50\172\32\0\1\173\61\0\1\174\41\0\1\175"+
-    "\43\0\1\176\57\0\1\177\36\0\1\200\53\0\1\201"+
-    "\22\0";
+    "\1\22\1\23\1\24\1\25\1\26\1\27\1\3\1\30"+
+    "\1\31\1\3\1\32\1\33\1\34\1\35\1\3\1\36"+
+    "\1\3\1\37\1\3\1\40\1\41\1\42\1\43\1\3"+
+    "\1\44\1\3\1\45\1\3\1\46\1\6\60\0\2\3"+
+    "\23\0\27\3\4\0\1\4\60\0\1\6\60\0\1\47"+
+    "\60\0\1\50\56\0\1\51\47\0\2\3\23\0\1\3"+
+    "\1\52\25\3\3\0\2\3\23\0\3\3\1\53\23\3"+
+    "\3\0\2\3\23\0\2\3\1\54\10\3\1\55\13\3"+
+    "\3\0\2\3\23\0\3\3\1\56\23\3\3\0\2\3"+
+    "\23\0\2\3\1\57\24\3\3\0\2\3\23\0\14\3"+
+    "\1\60\12\3\3\0\2\3\23\0\11\3\1\61\15\3"+
+    "\3\0\2\3\23\0\5\3\1\62\17\3\1\63\1\3"+
+    "\3\0\2\3\23\0\21\3\1\64\2\3\1\65\2\3"+
+    "\3\0\2\3\23\0\1\3\1\66\25\3\3\0\2\3"+
+    "\23\0\4\3\1\67\22\3\3\0\2\3\23\0\14\3"+
+    "\1\70\11\3\1\71\3\0\2\3\23\0\3\3\1\72"+
+    "\23\3\3\0\2\3\23\0\24\3\1\73\2\3\3\0"+
+    "\2\3\23\0\4\3\1\74\22\3\3\0\2\3\23\0"+
+    "\1\3\1\75\25\3\3\0\2\3\23\0\5\3\1\76"+
+    "\21\3\3\0\2\3\23\0\7\3\1\77\17\3\3\0"+
+    "\2\3\23\0\14\3\1\100\12\3\3\0\2\3\23\0"+
+    "\23\3\1\101\3\3\3\0\2\3\23\0\4\3\1\102"+
+    "\22\3\3\0\2\3\23\0\4\3\1\103\22\3\3\0"+
+    "\2\3\23\0\1\104\26\3\3\0\2\3\23\0\14\3"+
+    "\1\105\12\3\3\0\2\3\23\0\11\3\1\106\15\3"+
+    "\3\0\2\3\23\0\12\3\1\107\14\3\3\0\2\3"+
+    "\23\0\12\3\1\110\14\3\3\0\2\3\23\0\12\3"+
+    "\1\111\14\3\3\0\2\3\23\0\21\3\1\112\5\3"+
+    "\3\0\2\3\23\0\7\3\1\113\17\3\3\0\2\3"+
+    "\23\0\14\3\1\114\12\3\3\0\2\3\23\0\12\3"+
+    "\1\115\14\3\3\0\2\3\23\0\2\3\1\116\24\3"+
+    "\3\0\2\3\23\0\2\3\1\117\24\3\3\0\2\3"+
+    "\23\0\22\3\1\120\4\3\3\0\2\3\23\0\3\3"+
+    "\1\121\23\3\3\0\2\3\23\0\3\3\1\122\23\3"+
+    "\3\0\2\3\23\0\7\3\1\123\17\3\3\0\2\3"+
+    "\23\0\14\3\1\124\12\3\3\0\2\3\23\0\2\3"+
+    "\1\125\24\3\3\0\2\3\23\0\3\3\1\126\23\3"+
+    "\3\0\2\3\23\0\7\3\1\127\17\3\3\0\2\3"+
+    "\23\0\15\3\1\130\11\3\3\0\2\3\23\0\5\3"+
+    "\1\131\21\3\3\0\2\3\23\0\12\3\1\132\14\3"+
+    "\3\0\2\3\23\0\14\3\1\133\12\3\3\0\2\3"+
+    "\23\0\11\3\1\134\15\3\3\0\2\3\23\0\2\3"+
+    "\1\135\24\3\3\0\2\3\23\0\7\3\1\136\17\3"+
+    "\3\0\2\3\23\0\3\3\1\137\23\3\3\0\2\3"+
+    "\23\0\14\3\1\140\12\3\3\0\2\3\23\0\5\3"+
+    "\1\141\21\3\3\0\2\3\23\0\7\3\1\142\17\3"+
+    "\3\0\2\3\23\0\12\3\1\143\14\3\3\0\2\3"+
+    "\23\0\12\3\1\144\14\3\3\0\2\3\23\0\5\3"+
+    "\1\145\21\3\3\0\2\3\23\0\3\3\1\146\23\3"+
+    "\3\0\2\3\23\0\21\3\1\147\5\3\3\0\2\3"+
+    "\23\0\3\3\1\150\23\3\3\0\2\3\23\0\3\3"+
+    "\1\151\23\3\3\0\2\3\23\0\4\3\1\152\22\3"+
+    "\3\0\2\3\23\0\24\3\1\153\2\3\3\0\2\3"+
+    "\23\0\15\3\1\154\11\3\3\0\2\3\23\0\6\3"+
+    "\1\155\20\3\3\0\2\3\23\0\6\3\1\156\20\3"+
+    "\3\0\2\3\23\0\22\3\1\157\4\3\3\0\2\3"+
+    "\23\0\17\3\1\160\7\3\3\0\2\3\23\0\5\3"+
+    "\1\161\21\3\3\0\2\3\23\0\5\3\1\162\21\3"+
+    "\3\0\2\3\23\0\7\3\1\163\17\3\2\0\1\164"+
+    "\2\165\2\0\21\164\27\165\31\0\1\166\30\0\2\3"+
+    "\23\0\1\3\1\167\25\3\41\0\1\170\20\0\2\3"+
+    "\23\0\11\3\1\171\15\3\44\0\1\172\15\0\2\3"+
+    "\23\0\14\3\1\173\12\3\2\0\3\174\2\0\50\174"+
+    "\2\0\1\174\2\175\2\0\21\174\27\175\40\0\1\176"+
+    "\21\0\2\3\23\0\10\3\1\177\16\3\51\0\1\200"+
+    "\10\0\2\3\23\0\21\3\1\201\5\3\42\0\1\202"+
+    "\17\0\2\3\23\0\12\3\1\203\14\3\35\0\1\204"+
+    "\24\0\2\3\23\0\5\3\1\205\21\3\44\0\1\206"+
+    "\15\0\2\3\23\0\14\3\1\207\12\3\32\0\1\210"+
+    "\27\0\2\3\23\0\2\3\1\211\24\3\35\0\1\212"+
+    "\24\0\2\3\23\0\5\3\1\213\21\3\2\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[3813];
+    int [] result = new int[4747];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -199,14 +246,14 @@ class DsoLexer implements java_cup.runtime.Scanner {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\1\1\1\11\2\1\14\11\17\1\3\11"+
-    "\11\0\1\11\15\0\1\11\3\0\1\11\13\0\1\11"+
-    "\4\0\4\11\11\0\1\11\5\0\1\11\1\0\1\11"+
-    "\1\0\1\11\1\0\3\11\1\0\1\11\1\0\2\11"+
-    "\7\0\1\11\7\0\1\11";
+    "\1\1\1\11\3\1\1\11\1\1\1\11\2\1\14\11"+
+    "\17\1\4\11\112\1\1\0\1\1\1\0\1\1\1\0"+
+    "\1\1\1\0\1\1\1\0\1\1\1\0\1\1\1\0"+
+    "\1\1\1\0\1\1\1\0\1\1\1\0\1\1\1\0"+
+    "\1\1\1\11\1\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[129];
+    int [] result = new int[139];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -302,7 +349,7 @@ class DsoLexer implements java_cup.runtime.Scanner {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 168) {
+    while (i < 170) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
@@ -666,161 +713,174 @@ class DsoLexer implements java_cup.runtime.Scanner {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1: 
-            { System.out.print(yytext());
-            }
-          case 40: break;
-          case 2: 
-            { System.out.println("Token <");
-            }
-          case 41: break;
-          case 3: 
-            { System.out.println("Token =");
-            }
-          case 42: break;
-          case 4: 
-            { System.out.println("Token !");
+            { System.out.println("Inteiro: " + yytext());
             }
           case 43: break;
-          case 5: 
-            { System.out.println("Token +");
+          case 2: 
+            { System.out.println("Caractere inválido: '" + yytext() +
+                    "' linha: " + yyline + ", coluna: " + yycolumn);
             }
           case 44: break;
-          case 6: 
-            { System.out.println("Token -");
+          case 3: 
+            { System.out.println("Identificadores: " + yytext());
             }
           case 45: break;
-          case 7: 
-            { System.out.println("Token *");
-            }
-          case 46: break;
-          case 8: 
-            { System.out.println("Token ;");
-            }
-          case 47: break;
-          case 9: 
-            { System.out.println("Token .");
-            }
-          case 48: break;
-          case 10: 
-            { System.out.println("Token ,");
-            }
-          case 49: break;
-          case 11: 
-            { System.out.println("Token (");
-            }
-          case 50: break;
-          case 12: 
-            { System.out.println("Token )");
-            }
-          case 51: break;
-          case 13: 
-            { System.out.println("Token {");
-            }
-          case 52: break;
-          case 14: 
-            { System.out.println("Token }");
-            }
-          case 53: break;
-          case 15: 
-            { System.out.println("Token [");
-            }
-          case 54: break;
-          case 16: 
-            { System.out.println("Token ]");
-            }
-          case 55: break;
-          case 17: 
-            { System.out.println("Token &&");
-            }
-          case 56: break;
-          case 18: 
-            { System.out.println("Token ==");
-            }
-          case 57: break;
-          case 19: 
-            { System.out.println("Token !=");
-            }
-          case 58: break;
-          case 20: 
-            { System.out.println("Palavra reservada: if");
-            }
-          case 59: break;
-          case 21: 
-            { System.out.println("Palavra reservada: new");
-            }
-          case 60: break;
-          case 22: 
-            { System.out.println("Palavra reservada: int");
-            }
-          case 61: break;
-          case 23: 
-            { System.out.println("Palavra reservada: else");
-            }
-          case 62: break;
-          case 24: 
-            { System.out.println("Palavra reservada: true");
-            }
-          case 63: break;
-          case 25: 
-            { System.out.println("Palavra reservada: this");
-            }
-          case 64: break;
-          case 26: 
-            { System.out.println("Palavra reservada: void");
-            }
-          case 65: break;
-          case 27: 
-            { System.out.println("Palavra reservada: main");
-            }
-          case 66: break;
-          case 28: 
-            { System.out.println("Palavra reservada: class");
-            }
-          case 67: break;
-          case 29: 
-            { System.out.println("Palavra reservada: while");
-            }
-          case 68: break;
-          case 30: 
-            { System.out.println("Palavra reservada: false");
-            }
-          case 69: break;
-          case 31: 
-            { System.out.println("Palavra reservada: length");
-            }
-          case 70: break;
-          case 32: 
-            { System.out.println("Palavra reservada: static");
-            }
-          case 71: break;
-          case 33: 
-            { System.out.println("Palavra reservada: public");
-            }
-          case 72: break;
-          case 34: 
-            { System.out.println("Palavra reservada: String");
-            }
-          case 73: break;
-          case 35: 
-            { System.out.println("Palavra reservada: return");
-            }
-          case 74: break;
-          case 36: 
-            { System.out.println("Palavra reservada: boolean");
-            }
-          case 75: break;
-          case 37: 
-            { System.out.println("Palavra reservada: extends");
-            }
-          case 76: break;
-          case 38: 
+          case 4: 
             { /* ignora */
             }
+          case 46: break;
+          case 5: 
+            { System.out.println("Token <");
+            }
+          case 47: break;
+          case 6: 
+            { System.out.println("Token =");
+            }
+          case 48: break;
+          case 7: 
+            { System.out.println("Token !");
+            }
+          case 49: break;
+          case 8: 
+            { System.out.println("Token +");
+            }
+          case 50: break;
+          case 9: 
+            { System.out.println("Token -");
+            }
+          case 51: break;
+          case 10: 
+            { System.out.println("Token *");
+            }
+          case 52: break;
+          case 11: 
+            { System.out.println("Token ;");
+            }
+          case 53: break;
+          case 12: 
+            { System.out.println("Token .");
+            }
+          case 54: break;
+          case 13: 
+            { System.out.println("Token ,");
+            }
+          case 55: break;
+          case 14: 
+            { System.out.println("Token (");
+            }
+          case 56: break;
+          case 15: 
+            { System.out.println("Token )");
+            }
+          case 57: break;
+          case 16: 
+            { System.out.println("Token {");
+            }
+          case 58: break;
+          case 17: 
+            { System.out.println("Token }");
+            }
+          case 59: break;
+          case 18: 
+            { System.out.println("Token [");
+            }
+          case 60: break;
+          case 19: 
+            { System.out.println("Token ]");
+            }
+          case 61: break;
+          case 20: 
+            { System.out.print(yytext());
+            }
+          case 62: break;
+          case 21: 
+            { System.out.println("Token &&");
+            }
+          case 63: break;
+          case 22: 
+            { System.out.println("Token ==");
+            }
+          case 64: break;
+          case 23: 
+            { System.out.println("Token !=");
+            }
+          case 65: break;
+          case 24: 
+            { System.out.println("Palavra reservada: if");
+            }
+          case 66: break;
+          case 25: 
+            { System.out.println("Palavra reservada: new");
+            }
+          case 67: break;
+          case 26: 
+            { System.out.println("Palavra reservada: int");
+            }
+          case 68: break;
+          case 27: 
+            { System.out.println("Palavra reservada: else");
+            }
+          case 69: break;
+          case 28: 
+            { System.out.println("Palavra reservada: true");
+            }
+          case 70: break;
+          case 29: 
+            { System.out.println("Palavra reservada: this");
+            }
+          case 71: break;
+          case 30: 
+            { System.out.println("Palavra reservada: void");
+            }
+          case 72: break;
+          case 31: 
+            { System.out.println("Palavra reservada: main");
+            }
+          case 73: break;
+          case 32: 
+            { System.out.println("Palavra reservada: class");
+            }
+          case 74: break;
+          case 33: 
+            { System.out.println("Palavra reservada: while");
+            }
+          case 75: break;
+          case 34: 
+            { System.out.println("Palavra reservada: false");
+            }
+          case 76: break;
+          case 35: 
+            { System.out.println("Palavra reservada: length");
+            }
           case 77: break;
-          case 39: 
-            { System.out.println("Palavra reservada: System.out.println");
+          case 36: 
+            { System.out.println("Palavra reservada: static");
             }
           case 78: break;
+          case 37: 
+            { System.out.println("Palavra reservada: public");
+            }
+          case 79: break;
+          case 38: 
+            { System.out.println("Palavra reservada: String");
+            }
+          case 80: break;
+          case 39: 
+            { System.out.println("Palavra reservada: return");
+            }
+          case 81: break;
+          case 40: 
+            { System.out.println("Palavra reservada: boolean");
+            }
+          case 82: break;
+          case 41: 
+            { System.out.println("Palavra reservada: extends");
+            }
+          case 83: break;
+          case 42: 
+            { System.out.println("Palavra reservada: System.out.println");
+            }
+          case 84: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
