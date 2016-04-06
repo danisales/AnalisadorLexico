@@ -26,10 +26,9 @@ integer = {digit}*
 first = {letters} | {underline}
 alphanumerics = {letters}|{digit}|{underline}
 identifiers = {first}({alphanumerics})*
-whitespace = [\n\t\r\f]
+whitespace = \r|\n|\r\n|[ \t\f]
 
 %%
-
 /* Operadores: &&, <, ==, !=, +, -, *, !; 
 (não há operador de divisão, por enquanto) */
 
@@ -78,6 +77,10 @@ this	{ System.out.println("Palavra reservada: this"); }
 new		{ System.out.println("Palavra reservada: new"); }
 System.out.println	{ System.out.println("Palavra reservada: System.out.println"); }
 
-/* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
-whitespace { /* ignora */ } 
+{integer}	{ System.out.println("Inteiro: " + yytext()); }
+{identifiers}	{ System.out.println("Identificadores: " + yytext()); }
 
+/* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
+{whitespace} { /* ignora */ } 
+.            { System.out.println("Caractere inválido: '" + yytext() +
+                    "' linha: " + yyline + ", coluna: " + yycolumn); }
