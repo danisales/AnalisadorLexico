@@ -39,49 +39,49 @@ onelinecomment = "//" ~{linebreak}
 /* Operadores: &&, <, ==, !=, +, -, *, !; 
 (não há operador de divisão, por enquanto) */
 
-"&&"	{ System.out.println("Token " + yytext()); }
-"<"		{ System.out.println("Token " + yytext()); }
-"=="	{ System.out.println("Token " + yytext()); }
-"!="	{ System.out.println("Token " + yytext()); }
-"+"		{ System.out.println("Token " + yytext()); }
-"-"		{ System.out.println("Token " + yytext()); }
-"*"		{ System.out.println("Token " + yytext()); }
-"!"		{ System.out.println("Token " + yytext()); }
+"&&" |
+"<"	 |
+"==" |
+"!=" |
+"+"	 |
+"-"	 |
+"*"	 |
+"!"	 |
 
 /* Delimitadores e pontuação: ; . , = ( ) { } [ ] */
 
-";"		{ System.out.println("Token " + yytext()); }
-"."		{ System.out.println("Token " + yytext()); }
-","		{ System.out.println("Token " + yytext()); }
-"="		{ System.out.println("Token " + yytext()); }
-"("		{ System.out.println("Token " + yytext()); }
-")"		{ System.out.println("Token " + yytext()); }
-"{"		{ System.out.println("Token " + yytext()); }
-"}"		{ System.out.println("Token " + yytext()); }
-"["		{ System.out.println("Token " + yytext()); }
-"]"		{ System.out.println("Token " + yytext()); }
+";"	 |
+"."	 |
+","	 |
+"="	 |
+"("	 |
+")"	 |
+"{"	 |
+"}"	 |
+"["	 |
+"]"	 { System.out.println("Token " + yytext()); }
 
 /* Palavras reservadas: boolean, class, public, extends, static, void, main, String, int, while,
 if, else, return, length, true, false, this, new, System.out.println; */
 
-boolean	{ System.out.println("Palavra reservada: " + yytext()); }
-class	{ System.out.println("Palavra reservada: " + yytext()); }
-public	{ System.out.println("Palavra reservada: " + yytext()); }
-extends	{ System.out.println("Palavra reservada: " + yytext()); }
-static	{ System.out.println("Palavra reservada: " + yytext()); }
-void	{ System.out.println("Palavra reservada: " + yytext()); }
-main	{ System.out.println("Palavra reservada: " + yytext()); }
-String	{ System.out.println("Palavra reservada: " + yytext()); }
-int 	{ System.out.println("Palavra reservada: " + yytext()); }
-while	{ System.out.println("Palavra reservada: " + yytext()); }
-if		{ System.out.println("Palavra reservada: " + yytext()); }
-else	{ System.out.println("Palavra reservada: " + yytext()); }
-return	{ System.out.println("Palavra reservada: " + yytext()); }
-length	{ System.out.println("Palavra reservada: " + yytext()); }
-true	{ System.out.println("Palavra reservada: " + yytext()); }
-false	{ System.out.println("Palavra reservada: " + yytext()); }
-this	{ System.out.println("Palavra reservada: " + yytext()); }
-new		{ System.out.println("Palavra reservada: " + yytext()); }
+boolean	|
+class	|
+public	|
+extends	|
+static	|
+void	|
+main	|
+String	|
+int 	|
+while	|
+if		|
+else	|
+return	|
+length	|
+true	|
+false	|
+this	|
+new		|
 System.out.println	{ System.out.println("Palavra reservada: " + yytext()); }
 
 {integer}		{ System.out.println("Inteiro: " + yytext()); }
