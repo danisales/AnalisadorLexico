@@ -1,0 +1,43 @@
+package lexer;
+
+%%
+
+%line
+%column
+
+%cup
+%unicode
+%standalone
+
+%class DsoLexer
+
+/* Identificadores: um identificador começa com uma letra ou underline e é seguido por qualquer quantidade de letras, underline e dígitos. Apenas letras entre A/a e Z/z são permitidos, há diferença entre maiúscula e minúscula. Palavras-chave não são identificadores; */
+
+/* Literais Inteiros: uma sequência de dígitos iniciada com qualquer um dos dígitos entre 1 e 9 e seguida por qualquer número de dígitos entre 0 e 9. O dígito 0 também é um inteiro. */
+
+letters = [A-Za-z]
+underline = [_]
+digit = [0-9]
+integer = {digit}*
+first = {letters} | {underline}
+alphanumerics = {letters}|{digit}|{underline}
+identifiers = {first}({alphanumerics})*
+whitespace = [\n\t\r\f]
+
+/* Operadores: &&, <, ==, !=, +, -, *, !; 
+(não há operador de divisão, por enquanto) */
+
+%%
+
+"&&"	{ System.out.println("Token &&"); }
+"<"		{ System.out.println("Token <"); }
+"=="	{ System.out.println("Token =="); }
+"!="	{ System.out.println("Token !="); }
+"+"		{ System.out.println("Token +"); }
+"-"		{ System.out.println("Token -"); }
+"*"		{ System.out.println("Token *"); }
+"!"		{ System.out.println("Token !"); }
+
+/* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
+whitespace { /* ignora */ } 
+
