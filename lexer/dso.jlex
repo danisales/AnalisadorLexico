@@ -26,61 +26,69 @@ integer = {digit}*
 first = {letters} | {underline}
 alphanumerics = {letters}|{digit}|{underline}
 identifiers = {first}({alphanumerics})*
-whitespace = \r|\n|\r\n|[ \t\f]
+whitespace = {linebreak}|[ \t\f]
+linebreak = \r|\n|\r\n
+
+/* Comentários: os dois tipos de comentário são possíveis, comentários de linha, iniciando com // e indo até o final da linha, e comentários de múltiplas linhas, que consistem de qualquer texto entre /* e */, sem considerar aninhamento */
+
+comment = {multilinecomment} | {onelinecomment}
+multilinecomment = "/*" ~"*/"
+onelinecomment = "//" ~{linebreak}
 
 %%
 /* Operadores: &&, <, ==, !=, +, -, *, !; 
 (não há operador de divisão, por enquanto) */
 
-"&&"	{ System.out.println("Token &&"); }
-"<"		{ System.out.println("Token <"); }
-"=="	{ System.out.println("Token =="); }
-"!="	{ System.out.println("Token !="); }
-"+"		{ System.out.println("Token +"); }
-"-"		{ System.out.println("Token -"); }
-"*"		{ System.out.println("Token *"); }
-"!"		{ System.out.println("Token !"); }
+"&&"	{ System.out.println("Token " + yytext()); }
+"<"		{ System.out.println("Token " + yytext()); }
+"=="	{ System.out.println("Token " + yytext()); }
+"!="	{ System.out.println("Token " + yytext()); }
+"+"		{ System.out.println("Token " + yytext()); }
+"-"		{ System.out.println("Token " + yytext()); }
+"*"		{ System.out.println("Token " + yytext()); }
+"!"		{ System.out.println("Token " + yytext()); }
 
 /* Delimitadores e pontuação: ; . , = ( ) { } [ ] */
 
-";"		{ System.out.println("Token ;"); }
-"."		{ System.out.println("Token ."); }		
-","		{ System.out.println("Token ,"); }
-"="		{ System.out.println("Token ="); }
-"("		{ System.out.println("Token ("); }
-")"		{ System.out.println("Token )"); }
-"{"		{ System.out.println("Token {"); }
-"}"		{ System.out.println("Token }"); }
-"["		{ System.out.println("Token ["); }
-"]"		{ System.out.println("Token ]"); }
+";"		{ System.out.println("Token " + yytext()); }
+"."		{ System.out.println("Token " + yytext()); }
+","		{ System.out.println("Token " + yytext()); }
+"="		{ System.out.println("Token " + yytext()); }
+"("		{ System.out.println("Token " + yytext()); }
+")"		{ System.out.println("Token " + yytext()); }
+"{"		{ System.out.println("Token " + yytext()); }
+"}"		{ System.out.println("Token " + yytext()); }
+"["		{ System.out.println("Token " + yytext()); }
+"]"		{ System.out.println("Token " + yytext()); }
 
 /* Palavras reservadas: boolean, class, public, extends, static, void, main, String, int, while,
 if, else, return, length, true, false, this, new, System.out.println; */
 
-boolean	{ System.out.println("Palavra reservada: boolean"); }
-class	{ System.out.println("Palavra reservada: class"); }
-public	{ System.out.println("Palavra reservada: public"); }
-extends	{ System.out.println("Palavra reservada: extends"); }
-static	{ System.out.println("Palavra reservada: static"); }
-void	{ System.out.println("Palavra reservada: void"); }
-main	{ System.out.println("Palavra reservada: main"); }
-String	{ System.out.println("Palavra reservada: String"); }
-int 	{ System.out.println("Palavra reservada: int"); }
-while	{ System.out.println("Palavra reservada: while"); }
-if		{ System.out.println("Palavra reservada: if"); }
-else	{ System.out.println("Palavra reservada: else"); }
-return	{ System.out.println("Palavra reservada: return"); }
-length	{ System.out.println("Palavra reservada: length"); }
-true	{ System.out.println("Palavra reservada: true"); }
-false	{ System.out.println("Palavra reservada: false"); }
-this	{ System.out.println("Palavra reservada: this"); }
-new		{ System.out.println("Palavra reservada: new"); }
-System.out.println	{ System.out.println("Palavra reservada: System.out.println"); }
+boolean	{ System.out.println("Palavra reservada: " + yytext()); }
+class	{ System.out.println("Palavra reservada: " + yytext()); }
+public	{ System.out.println("Palavra reservada: " + yytext()); }
+extends	{ System.out.println("Palavra reservada: " + yytext()); }
+static	{ System.out.println("Palavra reservada: " + yytext()); }
+void	{ System.out.println("Palavra reservada: " + yytext()); }
+main	{ System.out.println("Palavra reservada: " + yytext()); }
+String	{ System.out.println("Palavra reservada: " + yytext()); }
+int 	{ System.out.println("Palavra reservada: " + yytext()); }
+while	{ System.out.println("Palavra reservada: " + yytext()); }
+if		{ System.out.println("Palavra reservada: " + yytext()); }
+else	{ System.out.println("Palavra reservada: " + yytext()); }
+return	{ System.out.println("Palavra reservada: " + yytext()); }
+length	{ System.out.println("Palavra reservada: " + yytext()); }
+true	{ System.out.println("Palavra reservada: " + yytext()); }
+false	{ System.out.println("Palavra reservada: " + yytext()); }
+this	{ System.out.println("Palavra reservada: " + yytext()); }
+new		{ System.out.println("Palavra reservada: " + yytext()); }
+System.out.println	{ System.out.println("Palavra reservada: " + yytext()); }
 
-{integer}	{ System.out.println("Inteiro: " + yytext()); }
-{identifiers}	{ System.out.println("Identificadores: " + yytext()); }
+{integer}		{ System.out.println("Inteiro: " + yytext()); }
+{identifiers}	{ System.out.println("Identificador: " + yytext()); }
 
 /* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
+{comment} { /* ignora */ }
 {whitespace} { /* ignora */ } 
 .            { System.out.println("Caractere inválido: '" + yytext() +
                     "' linha: " + yyline + ", coluna: " + yycolumn); }
