@@ -88,7 +88,6 @@ System.out.println	{ System.out.println("Palavra reservada: " + yytext()); }
 {identifiers}	{ System.out.println("Identificador: " + yytext()); }
 
 /* Comentários e whitespace não tem significado algum, exceto para separar os tokens. */
-{comment} { /* ignora */ }
+{comment} 	 { /* ignora */ }
 {whitespace} { /* ignora */ } 
-.            { System.out.println("Caractere inválido: '" + yytext() +
-                    "' linha: " + yyline + ", coluna: " + yycolumn); }
+. 			 { throw new RuntimeException("Caractere ilegal! '" + yytext() + "' na linha: " + yyline + ", coluna: " + yycolumn); }
